@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.DeliverydetailsFragment">
+
+    <include
+        android:id="@+id/topnav"
+        layout="@layout/layout_topnav2" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topnav"
+        android:nestedScrollingEnabled="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvOrderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="16dp"
+                android:text="Order ID : #PD1234567890"
+                android:textColor="@color/grey_text3"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/tvOrderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-25dp"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="16dp"
+                android:text="Date : 20-04-2023"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/txtItem4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-25dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="16dp"
+                android:text="Amount : ₹ 56"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-25dp"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="16dp"
+                android:text="Delivery Date : 20-04-2023 | Time : 10:30 AM"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_11ssp" />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:id="@+id/viewOrder"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/grey_text2" />
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:id="@+id/llDeliveryDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/blue_rounded_shape"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:src="@drawable/dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvUsername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Sudeshna Das"
+                            android:textAlignment="center"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_10ssp" />
+
+
+
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Lorem ipsum dolor, 123456"
+                            android:textAlignment="center"
+                            android:drawableTint="@color/blue"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:textSize="@dimen/_10ssp" />
+
+
+
+
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_25sdp"
+                        android:background="@drawable/gradientblue"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Call"
+                        android:visibility="gone"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:backgroundTint="@color/blue"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_7ssp"
+                        android:textColor="@color/white" />
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                app:cardElevation="0dp">
+
+                <fragment
+                    android:id="@+id/current_location"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/teal_700"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/_12ssp"
+                    android:drawableLeft="@drawable/icon_edit"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_15sdp"/>
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/llSubPress2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:background="@drawable/rounded_white_bg_edit_text1"
+                android:orientation="horizontal">
+
+
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/grey_light"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_weight="1"
+                            android:text="Item"
+                            android:textColor="@color/grey_text3"
+                            android:textSize="@dimen/_8ssp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_weight="0.5"
+                            android:text="Qty"
+                            android:textColor="@color/grey_text3"
+                            android:textSize="@dimen/_8ssp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_weight="0.5"
+                            android:text="Total"
+                            android:textColor="@color/grey_text3"
+                            android:textSize="@dimen/_8ssp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:weightSum="2">
+
+                        <CheckBox
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_margin="@dimen/_5sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_weight="1"
+                            android:text="Regular Wear"
+                            android:textColor="@color/grey_text3"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_weight="0.5"
+                            android:text="10"
+                            android:textColor="@color/grey_text3"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_weight="0.5"
+                            android:text="₹ 70"
+                            android:textColor="@color/grey_text3"
+                            android:textSize="@dimen/_8ssp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:weightSum="2">
+
+                        <CheckBox
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_margin="@dimen/_5sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_weight="1"
+                            android:text="Sessional Care"
+                            android:textColor="@color/grey_text3"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_weight="0.5"
+                            android:text="5"
+                            android:textColor="@color/grey_text3"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_weight="0.5"
+                            android:text="₹ 125"
+                            android:textColor="@color/grey_text3"
+                            android:textSize="@dimen/_8ssp" />
+
+                    </TableRow>
+
+
+                </TableLayout>
+            </LinearLayout>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnConfirmorder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_75sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_75sdp"
+                android:background="@drawable/gradientblue"
+                android:fontFamily="@font/poppins_medium"
+                android:text="CONFIRM ORDER"
+                android:textColor="@color/white" />
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnStartTrack"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_75sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_75sdp"
+                android:background="@drawable/gradientblue"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Start"
+                android:visibility="gone"
+                android:textColor="@color/white" />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+</layout>

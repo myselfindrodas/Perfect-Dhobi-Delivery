@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.dhobi.perfectdhobidelivery.ui.fragment.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+
+
+    <fragment
+        android:id="@+id/nav_oderdetails"
+        android:name="com.dhobi.perfectdhobidelivery.ui.fragment.OrderDetailsFragment"
+        android:label="Order Details"
+        tools:layout="@layout/fragment_order_details" />
+
+
+
+    <fragment
+        android:id="@+id/nav_deliverydetails"
+        android:name="com.dhobi.perfectdhobidelivery.ui.fragment.DeliverydetailsFragment"
+        android:label="Delivery Details"
+        tools:layout="@layout/fragment_deliverydetails" />
+
+
+
+    <fragment
+        android:id="@+id/nav_myorders"
+        android:name="com.dhobi.perfectdhobidelivery.ui.fragment.MyOrdersFragment"
+        android:label="My Orders"
+        tools:layout="@layout/fragment_my_orders" />
+
+
+
+    <fragment
+        android:id="@+id/nav_mydelivery"
+        android:name="com.dhobi.perfectdhobidelivery.ui.fragment.MyDeliveryFragment"
+        android:label="My delivery"
+        tools:layout="@layout/fragment_my_delivery" />
+
+
+
+    <fragment
+        android:id="@+id/nav_ratechart"
+        android:name="com.dhobi.perfectdhobidelivery.ui.fragment.RateChartFragment"
+        android:label="Rate Chart"
+        tools:layout="@layout/fragment_rate_chart" />
+
+
+
+    <fragment
+        android:id="@+id/nav_support"
+        android:name="com.dhobi.perfectdhobidelivery.ui.fragment.SupportFragment"
+        android:label="Help and Support"
+        tools:layout="@layout/fragment_support" />
+
+
+
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.dhobi.perfectdhobidelivery.ui.fragment.NotificationFragment"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notification" />
+
+
+
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.dhobi.perfectdhobidelivery.ui.fragment.FAQFragment"
+        android:label="FAQ Fragment"
+        tools:layout="@layout/fragment_f_a_q" />
+
+
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.dhobi.perfectdhobidelivery.ui.fragment.ProfileFragment"
+        android:label="Profile Fragment"
+        tools:layout="@layout/fragment_profile" />
+
+
+</navigation>

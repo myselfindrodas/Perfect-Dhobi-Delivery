@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/top_rounded_white_bg_btn"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llDeliveryDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_margin="@dimen/_15sdp"
+        android:orientation="horizontal">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Sudeshna Das"
+                android:textAlignment="center"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_10ssp" />
+
+
+            <TextView
+                android:id="@+id/tvDatetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Date : 20-04-2023 | Time : 12:30 PM"
+                android:textAlignment="center"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/_10ssp" />
+
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Lorem ipsum dolor, 123456"
+                android:textAlignment="center"
+                android:drawableTint="@color/blue"
+                android:drawablePadding="@dimen/_5sdp"
+                android:textSize="@dimen/_10ssp" />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnTrack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Track Address"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/green"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textSize="@dimen/_14ssp" />
+
+
+        <TextView
+            android:id="@+id/btnOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Order Details"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/blue"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textSize="@dimen/_14ssp" />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+</LinearLayout>

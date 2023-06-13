@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.MyDeliveryFragment">
+
+        <include
+            android:id="@+id/topnav"
+            layout="@layout/layout_topnav2" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topnav"
+            android:nestedScrollingEnabled="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:weightSum="3">
+
+
+                    <TextView
+                        android:id="@+id/btnTodaydelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Todays Delivery"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp" />
+
+
+
+                    <TextView
+                        android:id="@+id/btnUpcomingdelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Upcoming Delivery"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_9ssp" />
+
+
+
+                    <TextView
+                        android:id="@+id/btnCompleteddelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Completed Delivery"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_9ssp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <View
+                        android:id="@+id/viewTodaydelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@color/blue"/>
+
+
+
+                    <View
+                        android:id="@+id/viewUpcomingdelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@color/grey_text2"/>
+
+
+
+                    <View
+                        android:id="@+id/viewCompleteddelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@color/grey_text2"/>
+
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:id="@+id/rvTodaydeliveryList"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:visibility="gone"
+                    android:id="@+id/rvUpcomingdeliveryList"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:id="@+id/rvCompleteddeliveryList"/>
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>
